@@ -1,0 +1,55 @@
+﻿@model Odrys.Areas.Admin.Models.MenuModel
+@{
+    ViewBag.Title = "Sorting";
+}
+@Scripts.Render("~/bundles/jqueryui")
+@Scripts.Render("~/Scripts/ui-mjs/jquery.mjs.nestedSortable.js")
+@Styles.Render("~/Content/ui-mjs/jquery.mjs.nestedSortable.css")
+<script>
+    $(document).ready(function () {
+
+        $('ol.sortable').nestedSortable({
+            forcePlaceholderSize: true,
+            handle: 'div',
+            helper: 'clone',
+            items: 'li',
+            opacity: .6,
+            placeholder: 'placeholder',
+            revert: 250,
+            tabSize: 25,
+            tolerance: 'pointer',
+            toleranceElement: '> div',
+            maxLevels: 30,
+
+            isTree: true,
+            expandOnHover: 700,
+            startCollapsed: true
+        });
+
+        $('.disclose').on('click', function () {
+            $(this).closest('li').toggleClass('mjs-nestedSortable-collapsed').toggleClass('mjs-nestedSortable-expanded');
+        })
+
+        $('#serialize').click(function () {
+            serialized = $('ol.sortable').nestedSortable('serialize');
+
+            $.ajax({
+                type: "POST",
+                url: "/Admin/Menu/Sorting",
+                data: { id: '@Model.ID.ToString()', sortlist: serialized },
+                success: function(data, status, settings) {
+                    alert(data);
+                }
+            });
+        })
+    });
+</script>
+<h2>Меню '@Model.Text'</h2>
+<h3>Подреди елементите в менюто</h3>
+<section id="sortmenu">
+    @Html.SortMenuOL( Model.Name, "sortable ui-sortable", "mjs-nestedSortable-leaf",
+        "<div style=\"\"><span class=\"disclose\"><span></span></span>{0}</div>")
+    <p>
+		<input name="serialize" id="serialize" value="Запис" type="submit">
+	</p>
+</section>

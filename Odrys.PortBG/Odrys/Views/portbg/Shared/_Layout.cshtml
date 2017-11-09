@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="work design, web tehnologies and more" />
+    <meta name="description" content="Work design, web tehnologies and more" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/portbg/black/ddsmoothmenu.css",
+                   "~/Content/portbg/black/templatemo_style.css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/WebModules/piecemaker/scripts/swfobject/swfobject.js",
+                    "~/Scripts/portbg/black/ddsmoothmenu.js")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "templatemo_menu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+</head>
+<body>
+    <div id="templatemo_header_wrapper">
+        <div id="templatemo_header">
+            <div id="site_title"><a href="http://workdesign.hopto.org">WORK<span>DESIGN</span></a></div>
+            <div id="templatemo_menu" class="ddsmoothmenu">
+                    @Html.AppMenuUL("page_menu", "", "selected", "")
+             <br style="clear: left" />
+            </div>
+            <!-- end of templatemo_menu -->
+        </div>
+        <!-- END of header -->
+    </div>
+    @RenderBody()
+    <div id="templatemo_footer_wrapper">
+        <div id="templatemo_footer">
+
+            <div class="col col_14">
+                <h5>Връзки</h5>
+                <ul class="footer_list">
+                    <li><a href="http://nachosoft.sytes.net">NachoSoft</a></li>
+                    <li><a href="http://workdesign.hopto.org/portfolio.php">Нашето портфолио</a></li>
+                    <li><a href="http://pmsys.org">PMSys</a></li>
+                    <li><a href="#">Галерия</a></li>
+                    <li><a href="http://workdesign.hopto.org/about.php">За нас</a></li>
+                </ul>
+            </div>
+            <div class="col col_14">
+                <h5>Страници</h5>
+                <ul class="footer_list">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">За нас</a></li>
+                    <li><a href="portfolio.php">Портфолио</a></li>
+                    <li><a href="news.php">Новини</a></li>
+                    <li><a href="contact.php">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="col col_14">
+                <h5>Последвайте ни в:</h5>
+                <ul class="footer_list">
+                    <li><a href="#" class="social facebook">Facebook</a></li>
+                    <li><a href="#" class="social twitter">Twitter</a></li>
+                    <li><a href="#" class="social feed">RSS</a></li>
+                </ul>
+
+            </div>
+            <div class="col col_14 no_margin_right">
+
+                <div class="cleaner h30"></div>
+                Copyright © 2012 <a href="http://workdesign.hopto.org">WORKDESIGN</a> Designed by <a href="http://nachosoft.sytes.net" target="_parent">NachoSoft</a>
+            </div>
+            <div class="cleaner"></div>
+        </div>
+    </div>
+    <!-- END of footer -->
+</body>
+</html>

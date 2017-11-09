@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Odrys.Areas.Admin.Models.SiteModel>
+@{
+    ViewBag.Title = "Сайтове";
+}
+<h2>Сайтове</h2>
+<p class="link_toolbar">
+    @Html.ActionLink("Нов сайт", "Create", null, new { @class = "link_button" })
+</p>
+<table class="grid">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViewID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViewThemeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViewID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViewThemeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Работен", "Index", new { id=item.ID }) |
+            @Html.ActionLink("Редакция", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Изтрий", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+</table>

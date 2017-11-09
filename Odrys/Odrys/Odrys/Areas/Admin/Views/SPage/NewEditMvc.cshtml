@@ -1,0 +1,130 @@
+﻿@model Odrys.Areas.Admin.Models.SPageModel
+@{
+    ViewBag.Title = "Редакция на страница";
+}
+<style>
+    .page_value {
+        height: 600px;
+        width: 99%;
+    }
+    .pe_toolbox {
+        width: 99%;
+        display: block;
+        float: left;
+        background: #000;
+        cursor: context-menu;
+    }
+        .pe_toolbox ul {
+            list-style-type: none;
+        }
+            .pe_toolbox ul li {
+                float: left;
+                position: relative;
+                cursor: context-menu;
+                padding: 2px 5px;
+                margin:0;
+                color: #aaa;
+            }
+            .pe_toolbox ul li ul {
+                display: none;
+                position: absolute;
+                left: 0;
+                float: left;
+                margin: 0;
+                top:24px;
+                background: #333;
+            }
+            .pe_toolbox ul li:hover {
+                background: #333;
+                color: #fff;
+            }
+            .pe_toolbox ul li:hover ul {
+                display:inline;
+                position:absolute;
+            }
+            .pe_toolbox ul li ul li {
+                cursor: context-menu;
+                width: 600px;
+            }
+    .pe_toolbox_item{
+        cursor: context-menu;
+    }
+</style>
+<h2>Редакция на страница</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    @Html.HiddenFor(model => model.ID)
+    @Html.HiddenFor(model => model.TypeID)
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Title)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Title)
+        @Html.ValidationMessageFor(model => model.Title)
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(model => model.TypeName)
+    </div>
+    <div class="editor-field">
+        <b>@Model.TypeName</b>
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Value)
+    </div>
+    <div class="pe_toolbox">
+        <ul>
+            <li>Параметри
+                <ul>
+                    <li class="pe_toolbox_item">&#64;ViewBag.Title</li>
+                </ul>
+            </li>
+            <li>Менюта
+                <ul>
+                    <li class="pe_toolbox_item">&#64;Html.AppMenuUL(menuName, cssMenu, cssGroupSelected, cssItemSelected)</li>
+                    <li class="pe_toolbox_item">&#64;Html.AppMenuOL(menuName, cssMenu, cssGroupSelected, cssItemSelected)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(model => model.Value, new { @class = "page_value" })
+        @Html.ValidationMessageFor(model => model.Value)
+    </div>
+
+    <br />
+    <p>
+        <input type="submit" value="Запис" class="input_button" />
+        @Html.ActionLink("Отказ", "Index", null, new { @class = "link_button" })
+    </p>
+}
+      <script>
+          $('.pe_toolbox_item').click(function (e) {
+              var tav = $('#Value').val(),
+                  strPos = $('#Value')[0].selectionStart;
+              front = (tav).substring(0, strPos),
+              back = (tav).substring(strPos, tav.length);
+  
+              $('#Value').val(front + $(this).text() + back);
+
+              $('#Value')[0].selectionStart = strPos;
+          });
+    </script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

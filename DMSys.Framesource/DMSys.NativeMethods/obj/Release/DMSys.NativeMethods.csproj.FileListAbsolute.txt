@@ -1,0 +1,5 @@
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.NativeMethods.dll
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.NativeMethods.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.NativeMethods\obj\Release\DMSys.NativeMethods.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.NativeMethods\obj\Release\DMSys.NativeMethods.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.NativeMethods\obj\Release\DMSys.NativeMethods.pdb

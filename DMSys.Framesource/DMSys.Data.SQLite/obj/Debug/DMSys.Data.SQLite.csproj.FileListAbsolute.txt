@@ -1,0 +1,5 @@
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Data.SQLite.dll
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Data.SQLite.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Data.SQLite\obj\Debug\DMSys.Data.SQLite.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Data.SQLite\obj\Debug\DMSys.Data.SQLite.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Data.SQLite\obj\Debug\DMSys.Data.SQLite.pdb

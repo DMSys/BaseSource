@@ -1,0 +1,5 @@
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Utility.dll
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Utility.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Utility\obj\Debug\DMSys.Utility.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Utility\obj\Debug\DMSys.Utility.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Utility\obj\Debug\DMSys.Utility.pdb

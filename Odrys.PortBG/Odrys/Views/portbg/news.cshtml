@@ -1,0 +1,16 @@
+﻿@{
+    Layout = Model.LayoutUrl;
+    List<Odrys.Models.NewsModel> newsList = Html.NewsList(1);
+}
+<div id="templatemo_main_top"></div>
+<div id="templatemo_main">
+    <h2>Новини</h2>
+    @foreach (Odrys.Models.NewsModel news in newsList)
+    { 
+        <p>
+            <p><b>@news.Title</b></p>
+            <span><i>@news.Description</i></span><br />
+            <span>@news.Body</span>
+        </p>
+    }
+</div> <!-- END of main -->

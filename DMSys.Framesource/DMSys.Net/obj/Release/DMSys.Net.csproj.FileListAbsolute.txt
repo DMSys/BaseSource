@@ -1,0 +1,6 @@
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.Net.dll
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.Net.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Net\obj\Release\DMSys.Net.csprojResolveAssemblyReference.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Net\obj\Release\DMSys.Net.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Net\obj\Release\DMSys.Net.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Net\obj\Release\DMSys.Net.pdb

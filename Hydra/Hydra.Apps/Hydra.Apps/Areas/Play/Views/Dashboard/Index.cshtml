@@ -1,0 +1,23 @@
+﻿@model HydraAppsModel
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    function OpenApplication(gId, name, appUrl, author) {
+        dHydraApp.OpenApplication(gId, name, appUrl, author);
+    }
+</script>
+<div class="dba-panel">
+@foreach (HydraAppModel app in @Model)
+{ 
+    <div class="dba-item">
+        <div class="logo" onclick="OpenApplication('@app.UId', '@app.Name', '@app.AppUrl', '@app.DeveloperName')">
+            <img src="~/Content/files/apps/logos/index.png" title="@app.Name" />
+        </div>
+        <div class="content">
+            <a href="#" onclick="OpenApplication('@app.UId', '@app.Name', '@app.AppUrl', '@app.DeveloperName')" class="app">@app.Name</a>
+            <a href="#" class="dev">@app.DeveloperName</a>
+        </div>
+    </div>
+}
+</div>

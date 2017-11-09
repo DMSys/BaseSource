@@ -1,0 +1,19 @@
+﻿@model HydraAppsModel
+@{
+    ViewBag.Title = "Разработчици";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="grid-panel">
+    @{
+        var grid = new WebGrid(@Model, rowsPerPage: 10, canPage: true);
+
+        List<WebGridColumn> cols = new List<WebGridColumn>();
+        cols.Add(grid.Column(format: (item) => Html.ActionLink("Редакция", "Edit", new { id = item.UId })));
+        cols.Add(grid.Column("Name", "Наименование"));
+        cols.Add(grid.Column("Активно", format: (item) => @Html.Raw(((item.IsActive == true) ? "Да" : "Не"))));
+    }
+    @grid.GetHtml(tableStyle: "grid-view", columns: cols)
+</div>
+

@@ -1,0 +1,62 @@
+﻿@model Odrys.Models.AccountLoginModel
+@{
+    ViewBag.Title = "Вход";
+}
+<style>
+    .login_box {
+        border: 1px solid black;
+        width: 450px;
+        margin: 100px auto;
+    }
+    .login_box_title {
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        background-color: silver;
+    }
+    .login_box_item {
+        padding: 5px;
+    }
+        .login_box_item label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            padding-right: 5px;
+        }
+    .login_box_textbox {
+        width: 250px;
+    }
+    .login_box_button {
+        padding: 10px 30px;
+        text-align:right;
+    }
+        .login_box_button input {
+            border: 1px solid black;
+        }
+</style>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+<div class="login_box">
+    <div class="login_box_title">Вход</div>
+    <div class="login_box_item">
+        @Html.ValidationSummary(true)
+    </div>
+    <div class="login_box_item">
+        @Html.LabelFor(model => model.LoginID)
+        @Html.TextBoxFor(model => model.LoginID, new { @class = "login_box_textbox" })
+        @Html.ValidationMessageFor(model => model.LoginID)
+    </div>
+    <div class="login_box_item">
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password, new { @class = "login_box_textbox" })
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+    <div class="login_box_item">
+        @Html.LabelFor(model => model.RememberMe)
+        @Html.CheckBoxFor(model => model.RememberMe)
+    </div>
+    <div class="login_box_button">
+        <input type="submit" value="Вход" />
+    </div>
+</div>
+}

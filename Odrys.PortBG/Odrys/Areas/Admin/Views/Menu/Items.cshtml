@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Odrys.Areas.Admin.Models.MenuItemModel>
+
+@{
+    ViewBag.Title = "Items";
+}
+
+<h2>Items</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="grid">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderNo)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Редакция", "ItemEdit", new { id=item.ID }) |
+            @Html.ActionLink("Изтриване", "ItemDelete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

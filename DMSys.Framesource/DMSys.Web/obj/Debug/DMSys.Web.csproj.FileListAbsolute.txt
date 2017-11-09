@@ -1,0 +1,6 @@
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Web.dll
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Web.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Web\obj\Debug\DMSys.Web.csprojResolveAssemblyReference.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Web\obj\Debug\DMSys.Web.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Web\obj\Debug\DMSys.Web.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Web\obj\Debug\DMSys.Web.pdb

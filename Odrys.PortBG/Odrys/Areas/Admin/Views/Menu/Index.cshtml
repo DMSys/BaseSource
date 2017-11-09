@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Odrys.Areas.Admin.Models.MenuModel>
+@{
+    ViewBag.Title = "Менюта";
+}
+<h2>Менюта</h2>
+<p class="link_toolbar">
+    @Html.ActionLink("Ново меню", "Create", null, new { @class = "link_button" })
+</p>
+<table class="grid">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SiteID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.ActionLink("Редакция", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Елементи", "Items", new { id=item.ID }) |
+            @Html.ActionLink("Подреждане", "Sorting", new { id=item.ID }) |
+            @Html.ActionLink("Изтриване", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

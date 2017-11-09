@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head runat="server">
+    <!--
+    Created by NachoSoft v3.1.0.48375
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/style.css") %>" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="~/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="~/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+    <asp:ContentPlaceHolder ID="ScriptIncludePlaceHolder" runat="server">
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/jquery.js") %>"></script>
+        <script type="text/javascript" src="<%= ResolveUrl("~/Scripts/script.js") %>"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="nacho-main">
+            <div class="cleared reset-box"></div>
+            <div class="nacho-box nacho-sheet">
+                <div class="nacho-box-body nacho-sheet-body">
+                    <div class="nacho-bar nacho-nav">
+                        <div class="nacho-nav-outer">
+                            <asp:ContentPlaceHolder ID="MenuContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="cleared reset-box"></div>
+                    <div class="nacho-header">
+                        <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+
+                    </div>
+                    <div class="cleared reset-box"></div>
+                    <div class="nacho-layout-wrapper">
+                        <div class="nacho-content-layout">
+                            <div class="nacho-content-layout-row">
+                                <div class="nacho-layout-cell nacho-content">
+                                    <asp:ContentPlaceHolder ID="SheetContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                                    <div class="cleared"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cleared"></div>
+                    <div class="nacho-footer">
+                        <div class="nacho-footer-body">
+                            <a href="#" class="nacho-rss-tag-icon" title="RSS"></a>
+                            <div class="nacho-footer-text">
+                                <p>Developed by   <a href="http://nachosoft.sytes.net/">Nachosoft</a>  2013. All Rights Reserved.</p>
+                            </div>
+                            <div class="cleared"></div>
+                        </div>
+                    </div>
+                    <div class="cleared"></div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+            <p class="nacho-page-footer"></p>
+            <div class="cleared"></div>
+        </div>
+    </form>
+</body>
+</html>

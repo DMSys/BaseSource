@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Odrys.Areas.Admin.Models.SPageModel>
+@{
+    ViewBag.Title = "Страници";
+}
+<h2>Страници</h2>
+<p class="link_toolbar">
+    @Html.ActionLink("Нова страница", "Create", null, new { @class = "link_button" })
+</p>
+<table class="grid">
+    <tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Редакция", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

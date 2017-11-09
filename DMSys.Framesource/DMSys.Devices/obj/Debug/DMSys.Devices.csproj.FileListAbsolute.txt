@@ -1,0 +1,5 @@
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Devices.dll
+D:\DProjects\DMSys\debug\DMSys.Framework\DMSys.Devices.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Devices\obj\Debug\DMSys.Devices.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Devices\obj\Debug\DMSys.Devices.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Devices\obj\Debug\DMSys.Devices.pdb

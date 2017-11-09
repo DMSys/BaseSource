@@ -1,0 +1,95 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+/* header menu */
+.header_menu {
+    width:100%;
+    background-color:#2d2d2d;
+
+}
+    .header_menu ul {
+        list-style-type: none;
+        display:inline-block;
+    }
+        .header_menu ul li {
+            display:inline-block;
+        }
+            .header_menu ul li a {
+                color:white;
+                display:inline-block;
+                padding:3px 7px;
+                text-decoration:none;
+            }
+/* page menu */
+.page_menu {
+    list-style-type: none;
+}
+.page_content {
+    width: 100%;
+    border-collapse: collapse;
+}
+    .page_content tr td.pc_body {
+        vertical-align:top;
+    }
+    .page_content tr td.pc_menu {
+        vertical-align:top;
+        width: 200px;
+    }
+    .page_content tr td.pc_info {
+        border-bottom: 1px solid #2d2d2d;
+        text-align:center;
+        height: 30px;
+    }
+    .page_content tr td.pc_info a{
+        text-decoration: none;
+        color: #2d2d2d;
+    }
+/* table grid */
+table.grid {
+    border-collapse: collapse;
+}
+    table.grid tr th {
+        border: 1px solid white;
+        padding: 0px 5px;
+        background-color: #2d2d2d;
+        color: white;
+        font-weight:normal;
+    }
+    table.grid tr td {
+        border-bottom: 1px solid #2d2d2d;
+        padding: 0px 3px;
+    }
+    table.grid tr td a {
+        text-decoration:none;
+        color: #2d2d2d;
+    }
+
+.link_toolbar {
+    padding: 10px 0px;
+}
+.link_button {
+    border: 1px solid #2d2d2d;
+    padding: 2px 3px;
+    text-decoration: none;
+    color: #2d2d2d;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    display:inline-block;
+    line-height: 21px;
+}
+.input_button {
+    border: 1px solid #2d2d2d;
+    padding: 2px 3px;
+    color: #2d2d2d;
+    text-decoration: none;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    cursor: pointer;
+    display:inline-block;
+    line-height: 21px;
+}

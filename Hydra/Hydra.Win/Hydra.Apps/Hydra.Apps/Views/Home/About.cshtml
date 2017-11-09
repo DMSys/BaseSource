@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<script src="~/Scripts/dHydra-1.1.js"></script>
+<h2>About</h2>
+
+<h2>C#</h2>
+<table>
+    @foreach (string hdrName in this.Request.Headers)
+    {
+        <tr>
+            <td>@hdrName</td>
+            <td>@this.Request.Headers[hdrName]</td>
+        </tr>
+    }
+</table>
+<h2>JavaScript</h2>
+<div id="jsHeaders"></div>
+<script type="text/javascript">
+    var jsHeaders =
+        "<tr><td>appCodeName</td><td>" + navigator.appCodeName + "</td></tr>" +
+        "<tr><td>appName</td><td>" + navigator.appName + "</td></tr>" +
+        "<tr><td>appVersion</td><td>" + navigator.appVersion + "</td></tr>" +
+        "<tr><td>cookieEnabled</td><td>" + navigator.cookieEnabled + "</td></tr>" +
+        "<tr><td>geolocation</td><td>" + navigator.geolocation + "</td></tr>" +
+        "<tr><td>language</td><td>" + navigator.language + "</td></tr>" +
+        "<tr><td>onLine</td><td>" + navigator.onLine + "</td></tr>" +
+        "<tr><td>platform</td><td>" + navigator.platform + "</td></tr>" +
+        "<tr><td>product</td><td>" + navigator.product + "</td></tr>" +
+        "<tr><td>cookieEnabled</td><td>" + navigator.cookieEnabled + "</td></tr>" +
+        "<tr><td>userAgent</td><td>" + navigator.userAgent + "</td></tr>" +
+        "<tr><td>javaEnabled()</td><td>" + navigator.javaEnabled() + "</td></tr>";
+
+    document.getElementById("jsHeaders").innerHTML = '<table>' + jsHeaders + '</table>';
+</script>
+<div id="jsLocation"></div>
+<script type="text/javascript">
+    var jsLocation =
+        "<tr><td>hash</td><td>" + location.hash + "</td></tr>" +
+        "<tr><td>host</td><td>" + location.host + "</td></tr>" +
+        "<tr><td>hostname</td><td>" + location.hostname + "</td></tr>" +
+        "<tr><td>href</td><td>" + location.href + "</td></tr>" +
+        "<tr><td>origin</td><td>" + location.origin + "</td></tr>" +
+        "<tr><td>pathname</td><td>" + location.pathname + "</td></tr>" +
+        "<tr><td>port</td><td>" + location.port + "</td></tr>" +
+        "<tr><td>protocol</td><td>" + location.protocol + "</td></tr>" +
+        "<tr><td>search</td><td>" + location.search + "</td></tr>";
+
+    document.getElementById("jsLocation").innerHTML = '<table>' + jsLocation + '</table>';
+</script>
+
+<div id="jsTest"></div>
+<script type="text/javascript">
+    var jsTest =
+        "<tr><td>document.referrer</td><td>" + document.referrer + "</td></tr>" +
+		"<tr><td>document.cookie</td><td>" + document.cookie + "</td></tr>" +
+		"<tr><td>document.anchors</td><td>" + document.anchors + ":" + document.anchors.length + "</td></tr>";
+
+    for (i = 0; i < document.anchors.length; i++) {
+        jsTest +=
+            "<tr><td>document.anchors: " + document.anchors[i].name + "</td><td>" + document.anchors[i].text + "</td></tr>";
+    }
+    document.getElementById("jsTest").innerHTML = '<table>' + jsTest + '</table>';
+</script>
+
+
+
+
+<div id="testFun"></div>
+<script type="text/javascript">
+    function testFun() {
+
+        if (typeof Android !== 'undefined') {
+            if (typeof Android.select_account === 'function') {
+                Android.select_account();
+            }
+            else {
+                document.getElementById("testFun").innerHTML = 'no';
+            }
+        }
+        else {
+            document.getElementById("testFun").innerHTML = 'no 11';
+        }
+    }
+
+    function testFun1() {
+
+        var t = ('System' in window.external);
+        // var t = ('Close' in window.external.System);
+        // .System.Close
+        // var t = typeof window.external.System['Close'];
+
+        document.getElementById("testFun").innerHTML = t;
+
+        // SystemApp.Close();
+        /*
+        if (!type_is_defined('Android')) {
+
+            document.getElementById("testFun").innerHTML = 'D:yes';
+            if (type_is_function('Android.select_account')) {
+                // Android.select_account();
+                document.getElementById("testFun").innerHTML = 'yes';
+            }
+            else {
+                document.getElementById("testFun").innerHTML = 'F:no';
+            }
+        }
+        else {
+            document.getElementById("testFun").innerHTML = 'type_is_defined: no';
+        }*/
+    }
+
+</script>
+<input type="button" value="testFun" onclick="testFun1()" class="btn btn-primary" />

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    @Styles.Render(ViewBag.Styles)
+    @Scripts.Render(ViewBag.Scripts)
+    <style>
+        .art-content .art-postcontent-0 .layout-item-0 {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .ie7 .post .layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .ie6 .post .layout-cell {
+            border: none !important;
+            padding: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="art-main">
+        <div class="art-sheet clearfix">
+            <header class="art-header clearfix">
+
+
+                <div class="art-shapes">
+                    <h1 class="art-headline" data-left="1.23%">
+                        <a href="#">Enter Site Title</a>
+                    </h1>
+
+
+                </div>
+                <div class="art-textblock art-object227400126" data-left="97.5%">
+                    <form class="art-search" name="Search" action="javascript:void(0)">
+                        <input type="text" value="">
+                        <input type="submit" value="Search" name="search" class="art-search-button">
+                    </form>
+                </div>
+                <nav class="art-nav clearfix">
+                    @Html.AppMenuUL("page_menu", "art-hmenu", "active", "active")
+                </nav>
+            </header>
+            <div class="art-layout-wrapper clearfix">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1 clearfix">
+                            <div class="art-vmenublock clearfix">
+                                <div class="art-vmenublockheader">
+                                    <h3 class="t">VMenu</h3>
+                                </div>
+                                <div class="art-vmenublockcontent">
+                                    @Html.AppMenuUL("page_menu", "art-vmenu", "active", "active")
+                                </div>
+                            </div>
+                            <div class="art-block clearfix">
+                                <div class="art-blockheader">
+                                    <h3 class="t">Block</h3>
+                                </div>
+                                <div class="art-blockcontent">
+                                    <p>Enter content here...</p>
+                                    <br>
+                                    <p>
+                                        <input type="text" value="Text..."></p>
+                                    <p style="margin-top: 5px">
+                                        <label class="art-checkbox">
+                                            <input value="" type="checkbox">Lorem ipsum dolor.</label></p>
+                                    <p style="margin-top: 5px">
+                                        <label class="art-radiobutton">
+                                            <input value="" type="radio" name="rg">Text...</label>
+                                        <label class="art-radiobutton">
+                                            <input value="" type="radio" name="rg">Text...</label></p>
+                                    <p style="margin-top: 5px"><a href="#" class="art-button">Send</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="art-layout-cell art-content clearfix">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="art-footer clearfix">
+                <p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p>
+                <p>Copyright © 2013. All Rights Reserved.</p>
+            </footer>
+        </div>
+        <p class="art-page-footer">
+            <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
+        </p>
+    </div>
+</body>
+</html>

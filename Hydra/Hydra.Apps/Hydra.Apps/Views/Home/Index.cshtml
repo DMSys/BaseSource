@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<!--
+    <script type="text/javascript" src="~/Scripts/Windows/system.form.js"></script>
+
+<script type="text/javascript" src="~/Scripts/Aandroid/system.form.js"></script>
+<script type="text/javascript" src="~/Scripts/system.form.js"></script>
+-->
+<script src="~/Scripts/dHydra-1.1.js"></script>
+<script>
+
+    function Close() {
+        dHydra.System.Close();
+    }
+
+    function ShowMessageBox() {
+        dHydra.System.ShowMessageBox('test', 'caption test');
+    }
+</script>
+<h2>Index</h2>
+
+<p><button onclick="Close()">Close</button></p>
+<p><button onclick="ShowMessageBox()">ShowMessageBox</button></p>

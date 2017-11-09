@@ -1,0 +1,5 @@
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.Systems.dll
+D:\DProjects\DMSys\release\DMSys.Framework\DMSys.Systems.pdb
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Systems\obj\Release\DMSys.Systems.csproj.CoreCompileInputs.cache
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Systems\obj\Release\DMSys.Systems.dll
+D:\DProjects\DMSys\src\DMSys.BaseSource\DMSys.Framesource\DMSys.Systems\obj\Release\DMSys.Systems.pdb
