@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Systems", "DMSys.Systems\DMSys.Systems.csproj", "{E611627D-89D3-4560-959F-05CD28510086}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Systems", "DMSys.Systems\DMSys.Systems.40.csproj", "{E611627D-89D3-4560-959F-05CD28510086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Controls", "DMSys.Controls\DMSys.Controls.csproj", "{13D9E08E-A86B-4757-AF8D-F1D760994E79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Controls", "DMSys.Controls\DMSys.Controls.40.csproj", "{13D9E08E-A86B-4757-AF8D-F1D760994E79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Cryptography", "DMSys.Cryptography\DMSys.Cryptography.csproj", "{603F39F8-1E46-4F1D-B994-402B6D7D87E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Cryptography", "DMSys.Cryptography\DMSys.Cryptography.40.csproj", "{603F39F8-1E46-4F1D-B994-402B6D7D87E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.NativeMethods", "DMSys.NativeMethods\DMSys.NativeMethods.csproj", "{A1407795-FA46-4C31-903B-83F5E7293DD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.NativeMethods", "DMSys.NativeMethods\DMSys.NativeMethods.40.csproj", "{A1407795-FA46-4C31-903B-83F5E7293DD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Net", "DMSys.Net\DMSys.Net.csproj", "{C63061A9-3E61-4BFB-B0E0-FB6BE2CE31FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Net", "DMSys.Net\DMSys.Net.40.csproj", "{C63061A9-3E61-4BFB-B0E0-FB6BE2CE31FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Data.SQLite", "DMSys.Data.SQLite\DMSys.Data.SQLite.csproj", "{F1653F20-D47D-4F29-8C55-3C835542AF5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Data.SQLite", "DMSys.Data.SQLite\DMSys.Data.SQLite.40.csproj", "{F1653F20-D47D-4F29-8C55-3C835542AF5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Utility", "DMSys.Utility\DMSys.Utility.csproj", "{F5843224-59CB-439F-98B3-795B8E89AE85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Utility", "DMSys.Utility\DMSys.Utility.40.csproj", "{F5843224-59CB-439F-98B3-795B8E89AE85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Devices", "DMSys.Devices\DMSys.Devices.csproj", "{17DA4B39-30E1-468E-9F9D-82009135CFC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Devices", "DMSys.Devices\DMSys.Devices.40.csproj", "{17DA4B39-30E1-468E-9F9D-82009135CFC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Data", "DMSys.Data\DMSys.Data.csproj", "{D731EBC1-783F-4C37-8198-3BE8C419F506}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Data", "DMSys.Data\DMSys.Data.40.csproj", "{D731EBC1-783F-4C37-8198-3BE8C419F506}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Web", "DMSys.Web\DMSys.Web.csproj", "{164B2AB6-0DB3-4882-82C6-4231D17A9FAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMSys.Web", "DMSys.Web\DMSys.Web.40.csproj", "{164B2AB6-0DB3-4882-82C6-4231D17A9FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
