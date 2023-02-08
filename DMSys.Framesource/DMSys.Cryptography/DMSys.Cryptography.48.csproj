@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{603F39F8-1E46-4F1D-B994-402B6D7D87E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMSys.Cryptography</RootNamespace>
+    <AssemblyName>DMSys.Cryptography</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DelaySign>true</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\debug\DMSys.Framework\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\release\DMSys.Framework\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\DMSys.Framework.Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\DMSys.Framework\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ArchiveData.Designer.cs">
+      <DependentUpon>ArchiveData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveTools\BZip2\BZip2.cs" />
+    <Compile Include="ArchiveTools\BZip2\BZip2Constants.cs" />
+    <Compile Include="ArchiveTools\BZip2\BZip2Exception.cs" />
+    <Compile Include="ArchiveTools\BZip2\BZip2InputStream.cs" />
+    <Compile Include="ArchiveTools\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="ArchiveTools\Checksums\Adler32.cs" />
+    <Compile Include="ArchiveTools\Checksums\CRC32.cs" />
+    <Compile Include="ArchiveTools\Checksums\IChecksum.cs" />
+    <Compile Include="ArchiveTools\Checksums\StrangeCRC.cs" />
+    <Compile Include="ArchiveTools\Core\FileSystemScanner.cs" />
+    <Compile Include="ArchiveTools\Core\INameTransform.cs" />
+    <Compile Include="ArchiveTools\Core\NameFilter.cs" />
+    <Compile Include="ArchiveTools\Core\PathFilter.cs" />
+    <Compile Include="ArchiveTools\Encryption\PkzipClassic.cs" />
+    <Compile Include="ArchiveTools\GZip\GZIPConstants.cs" />
+    <Compile Include="ArchiveTools\GZip\GZipException.cs" />
+    <Compile Include="ArchiveTools\GZip\GzipInputStream.cs" />
+    <Compile Include="ArchiveTools\GZip\GzipOutputStream.cs" />
+    <Compile Include="ArchiveTools\SharpZipBaseException.cs" />
+    <Compile Include="ArchiveTools\Tar\InvalidHeaderException.cs" />
+    <Compile Include="ArchiveTools\Tar\TarArchive.cs" />
+    <Compile Include="ArchiveTools\Tar\TarBuffer.cs" />
+    <Compile Include="ArchiveTools\Tar\TarEntry.cs" />
+    <Compile Include="ArchiveTools\Tar\TarException.cs" />
+    <Compile Include="ArchiveTools\Tar\TarHeader.cs" />
+    <Compile Include="ArchiveTools\Tar\TarInputStream.cs" />
+    <Compile Include="ArchiveTools\Tar\TarOutputStream.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Deflater.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Inflater.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="ArchiveTools\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="ArchiveTools\Zip\FastZip.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipConstants.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipEntry.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipException.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipFile.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipInputStream.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipNameTransform.cs" />
+    <Compile Include="ArchiveTools\Zip\ZipOutputStream.cs" />
+    <Compile Include="CheckSum\FunCS.cs" />
+    <Compile Include="CheckSum\IdentityCard.cs" />
+    <Compile Include="CryptoAsymmetric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CryptoAsymmetric.Designer.cs">
+      <DependentUpon>CryptoAsymmetric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CryptoSymmetric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CryptoSymmetric.Designer.cs">
+      <DependentUpon>CryptoSymmetric.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Declare.cs" />
+    <Compile Include="Hashing.cs" />
+    <Compile Include="HexConvert.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CryptoSymmetric.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CryptoAsymmetric.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ArchiveData.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
